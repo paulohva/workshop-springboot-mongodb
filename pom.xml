@@ -11,8 +11,8 @@
 	<groupId>com.paulohva</groupId>
 	<artifactId>workshop-spring-boot-mongodb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>workshopmongodb</name>
+	<description>Workshop for Spring Boot with MongoDb</description>
 
 	<properties>
 		<java.version>1.8</java.version>
