@@ -10,9 +10,9 @@ import java.util.Objects;
 public class User implements Serializable {
 
     @Id
-    public String id;
-    public String name;
-    public String email;
+    private String id;
+    private String name;
+    private String email;
 
     public User() {
     }
