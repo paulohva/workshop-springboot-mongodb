@@ -1,6 +1,7 @@
 package com.paulohva.workshopspringbootmongodb.services;
 
 import com.paulohva.workshopspringbootmongodb.domain.User;
+import com.paulohva.workshopspringbootmongodb.dto.UserDTO;
 import com.paulohva.workshopspringbootmongodb.repository.UserRepository;
 
 import com.paulohva.workshopspringbootmongodb.services.exception.ObjectNotFoundException;
@@ -24,6 +25,14 @@ public class UserService {
     public User findById(String id) {
         Optional<User> user = repo.findById(id);
         return user.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
+    }
+
+    public User insert(User user) {
+        return repo.insert(user);
+    }
+    
+    public User fromDTO(UserDTO objDto) {
+        return new User(objDto.getId(), objDto.getName(), objDto.getEmail());
     }
 
 }
