@@ -1,5 +1,6 @@
 package com.paulohva.workshopspringbootmongodb.resources;
 
+import com.paulohva.workshopspringbootmongodb.domain.Post;
 import com.paulohva.workshopspringbootmongodb.domain.User;
 import com.paulohva.workshopspringbootmongodb.dto.UserDTO;
 import com.paulohva.workshopspringbootmongodb.services.UserService;
@@ -57,5 +58,11 @@ public class UserResource {
         obj.setId(id);
         obj = service.update(obj);
         return ResponseEntity.noContent().build();
+    }
+
+    @RequestMapping(value="/{id}/posts",method=RequestMethod.GET)
+    public ResponseEntity<List<Post>> findPostsByUserId(@PathVariable String id) {
+        User obj = service.findById(id);
+        return ResponseEntity.ok().body(obj.getPosts());
     }
 }
