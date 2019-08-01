@@ -2,7 +2,7 @@ package com.paulohva.workshopspringbootmongodb.services;
 
 import com.paulohva.workshopspringbootmongodb.domain.User;
 import com.paulohva.workshopspringbootmongodb.repository.UserRepository;
-import com.paulohva.workshopspringbootmongodb.resources.UserResource;
+
 import com.paulohva.workshopspringbootmongodb.services.exception.ObjectNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
